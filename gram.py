@@ -20,6 +20,7 @@ from theano.gradient import disconnected_grad
 
 _TEST_RATIO = 0.2
 _VALIDATION_RATIO = 0.1
+config.floatX = 'float32'
 
 def unzip(zipped):
     new_params = OrderedDict()

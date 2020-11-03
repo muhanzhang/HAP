@@ -5,8 +5,6 @@
 
 import sys, random, time, argparse
 
-sys.path = sys.path[:-2] + sys.path[-1:]  # temporally disable my global python package directory; comment it out when releasing code
-
 from collections import OrderedDict, defaultdict
 import cPickle as pickle
 import numpy as np
@@ -24,6 +22,7 @@ from theano.gradient import disconnected_grad
 _TEST_RATIO = 0.2
 _VALIDATION_RATIO = 0.1
 THEANO_FLAGS='device=cuda,  floatX=float32'
+config.floatX = 'float32'
 
 def unzip(zipped):
     new_params = OrderedDict()
