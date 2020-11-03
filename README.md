@@ -24,9 +24,9 @@ Like GRAM, the code trains an RNN ([Gated Recurrent Units](https://arxiv.org/abs
 1. You can use "process_mimic.py" located in "data/mimic3/" to process MIMIC-III dataset and generate a suitable training dataset for HAP. 
 Place the script to the same location where the MIMIC-III CSV files are located, and run the script with:
 
-    python process_mimic.py ADMISSIONS.csv DIAGNOSES_ICD.csv mimic
+        python process_mimic.py ADMISSIONS.csv DIAGNOSES_ICD.csv mimic
 
-More instructions are described inside the script. You may use the already processed files included in "data/mimic3/"; otherwise, please copy your generated "mimic.*" files to "data/mimic3/".
+    More instructions are described inside the script. You may use the already processed files included in "data/mimic3/"; otherwise, please copy your generated "mimic.*" files to "data/mimic3/".
 
 2. Use "build_trees.py" in "data/mimic3/" to build files that contain the ancestor information of each medical code. 
 This requires "ccs_multi_dx_tool_2015.csv" (Multi-level CCS for ICD9), which can be downloaded from [here](https://www.hcup-us.ahrq.gov/toolssoftware/ccs/Multi_Level_CCS_2015.zip). We also include it in "data/mimic3/".
